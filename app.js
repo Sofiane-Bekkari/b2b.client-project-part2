@@ -80,14 +80,14 @@ window.addEventListener('scroll', function(){
         panelTv.style.position = "static"
     }
     // test ELEMENT ANIMATION
-    if(scroll >2630 && width < 900) {
+    if(scroll > 2550) {
         textTV.style.transform = 'translateY(0%)';
         elementTV.style.transform = 'translateX(100%)';
-        console.log('Worksss');
+        console.log('Worksss TV');
     } else {
         textTV.style.transform = 'translateY(-200%)';
         elementTV.style.transform = 'translateX(100%)';
-        console.log('WorksssBack');
+        console.log('WorksssBack TV');
     }
 
 
@@ -115,7 +115,7 @@ window.addEventListener('scroll', function(){
     if(scroll > 4500){
         panelWindow.style.position = "fixed";
         panelWindow.style.top = "0%";
-        console.log("WINDOW FIXED!!!");
+        console.log("WINDOW FIXED!!!2");
 
     } else {
         panelWindow.style.position = "static";

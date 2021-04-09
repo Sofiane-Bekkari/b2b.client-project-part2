@@ -1382,11 +1382,6 @@ footer {
     .footer-content {
         font-size: 2.5rem;
     }
-    /* DOUBLE BNG */
-    .double-bng {
-        position:relative ;
-        overflow-x: hidden;
-    }
     .section-blue {
         position: absolute;
         transform: translateX(-100%);
@@ -1402,6 +1397,69 @@ footer {
    
     img.window {
         width: 700px;
+    }
+    /* Hidden Overflow PANELS */
+    .all-panels {
+        border: solid rebeccapurple;
+        overflow-x: hidden;
+    }
+    img.tv {
+        top: -325px;
+        width: 1850px;
+     
+    }
+    .t-tv {
+        left: 0;
+        width: 50%;
+    }
+    .t-tv h1 {
+        font-size: 4rem;
+        width: 120%;
+        line-height: 4rem;
+    }
+    .t-tv h3 {
+        font-size: 2.8rem;
+    }
+    .t-tv p {
+        font-size: 1.8rem ;
+    }
+    .con-element {
+        width: 70%;
+    }
+    .t-sofa {
+        top: 200px;
+        width: 80%;
+        left: 0;
+    }
+    .t-sofa h1 {
+        font-size:  4rem;
+        line-height: 4rem;
+    }
+    .t-sofa h3 {
+        font-size: 2.8rem;
+    }
+    .t-sofa p {
+        font-size: 1.8rem;
+    }
+    img.sofa {
+        width: 2200px;
+        left: 780px;
+    }
+    img.window {
+        left: -50%;
+        top: -450px;
+    }
+    .t-window {
+        top: 800px;
+    }
+    .t-window h1 {
+        font-size: 4rem;
+    }
+    .t-window h3 {
+        font-size: 2.8rem;
+    }
+    .t-window {
+        font-size: 1.8rem;
     }
 }
 
@@ -1520,48 +1578,26 @@ footer {
     .yellow-section img.cameleon {
         margin-bottom: 8rem;
     }
-    .text-blue { 
-        padding: 0 3rem 0 0;
-        top: 30%;
-    }
-    .text-blue h1 {
-        font-size: 4.2rem;
-    }
-    .text-blue h3 {
-        font-size: 3.2rem;
-    }
-    .text-blue p {
-        font-size: 1.8rem;
-        padding-right: 4.5rem;
-        left: 0;
-    }
-    .tv-table {
-        margin-right: -1rem;
+   .t-tv {
+       top: 700px;
+   }
 
-    }
-    img.tv {
-        width: 1900px;
-        margin-right: 0;
-        margin-bottom: 8rem;
+   .t-sofa {
+       top: 400px;
+   }
+   img.sofa {
+       top: 800px;
+       left: 880px;
+       width: 2500px;
+   }
 
-    }
-    .text-sofa {
-        top: 500px;
-    }
-
-    img.sofa {
-        top: 850px;
-        width: 2300px;
-    }
-    img.sofa-2 {
-        width: 2100px;
-        top: 900px;
-    }
-    img.window {
-        width: 850px;
-    }
-    .text-window {
-        padding-top: 4rem;
-    }
+   .t-window {
+       top: 1250px;
+   }
+   img.window {
+       top: -650px;
+       left: -100%;
+       width: 1100px;
+   }
 
 }
