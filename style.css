@@ -429,12 +429,24 @@ img.spot {
 }
 /* panel-tv */
 .panel-tv {
-    background: url(/images/bng-blue1.png) no-repeat center;
+    background: url(/images/bgn-showcase-1.png) no-repeat center;
     background-size: cover;
     width: 100%;
     min-height: 100vh;
     z-index: 9999;
     transition: all .5s ease-in;
+}
+.layer-tv {
+    width: 100%;
+    display: block;
+    visibility: hidden;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(144, 202, 249, 0.308), 
+        rgba(144, 202, 249, 0.773) );
+    transform: translateY(-100%);
+    transition: all .5s ease;
+
 }
 .text {
     text-align: center;
@@ -483,12 +495,23 @@ img.tv {
 }
 /* SOFA */
 .panel-sofa {
-    background: url(/images/bgn-dark-1.png) no-repeat center;
+    background: url(/images/bgn-showcase-1.png) no-repeat center;
     background-size: cover;
     width: 100%;
     min-height: 100vh;
     z-index: 9999;
     transition: all .5s ease-in;
+}
+.layer-sofa {
+    width: 100%;
+    display: block;
+    visibility: hidden;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(2, 5, 54, 0.842), 
+        rgba(1, 5, 47, 0.808));
+    transform: translateY(-100%);
+    transition: all .5s ease-in-out;
 }
 .sofa {
     width: 500px;
@@ -497,12 +520,23 @@ img.tv {
 
 /* window */
 .panel-window {
-    background: url(/images/bng-yellow1.png) no-repeat center;
+    background: url(/images/bgn-showcase-1.png) no-repeat center;
     background-size: cover;
     width: 100%;
     min-height: 100vh;
     z-index: 9999;
     transition: all .5s ease-in;
+}
+.layer-win {
+    width: 100%;
+    display: block;
+    visibility: hidden;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(255, 255, 0, 0.787), 
+        rgba(248, 229, 58, 0.377));
+    transform: translateY(-100%);
+    transition: all .5s ease-in-out;
 }
 .window {
     width: 350px;
@@ -1450,7 +1484,8 @@ footer {
         top: -450px;
     }
     .t-window {
-        top: 800px;
+        top: 840px;
+        text-align: center;
     }
     .t-window h1 {
         font-size: 4rem;

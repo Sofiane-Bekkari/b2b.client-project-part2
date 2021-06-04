@@ -30,6 +30,11 @@ const panelTv = document.querySelector(".panel-tv");
 const panelSofa = document.querySelector(".panel-sofa");
 const panelWindow = document.querySelector(".panel-window");
 
+//LAYERS SLIDE
+const layerTv = document.querySelector('.layer-tv');
+const layerSofa = document.querySelector('.layer-sofa');
+const layerWin = document.querySelector('.layer-win');
+
 // TEXTS ANIMATION
 const textTV = document.querySelector(".t-tv");
 const textSofa = document.querySelector(".t-sofa");
@@ -75,19 +80,24 @@ window.addEventListener('scroll', function(){
     if(scroll > 2500){ 
         panelTv.style.position = "fixed";
         panelTv.style.top = "0%";
+        layerTv.style.transform = 'translateY(0%)';
+        layerTv.style.visibility = 'visible';
+
       
     } else {
         panelTv.style.position = "static"
+        layerTv.style.visibility = 'hidden';
+        layerTv.style.transform = 'translateY(-100%)';
     }
     // test ELEMENT ANIMATION
     if(scroll > 2550) {
         textTV.style.transform = 'translateY(0%)';
         elementTV.style.transform = 'translateX(100%)';
-        console.log('Worksss TV');
+       
     } else {
-        textTV.style.transform = 'translateY(-200%)';
+        textTV.style.transform = 'translateY(120%)';
         elementTV.style.transform = 'translateX(100%)';
-        console.log('WorksssBack TV');
+      
     }
 
 
@@ -95,17 +105,20 @@ window.addEventListener('scroll', function(){
     if(scroll > 3500){
         panelSofa.style.position = "fixed";
         panelSofa.style.top = "0%";
-        console.log("SOFA FIXED!!!");
+        layerSofa.style.visibility = 'visible';
+        layerSofa.style.transform = 'translateY(0%)';
     } else {
         panelSofa.style.position = "static";
+        layerSofa.style.transform = 'translateY(-100%)';
+        layerSofa.style.visibility = 'hidden';
     }
     // test ELEMENTS ANIMATION
     if(scroll > 3630) {
         textSofa.style.transform = 'translateY(0%)';
         elementSofa.style.transform = 'translateX(-38%)'
     } else {
-        textSofa.style.transform = 'translateX(110%)';
-        elementSofa.style.transform = 'translateX(-100%)'
+        textSofa.style.transform = 'translateX(-130%)';
+        elementSofa.style.transform = 'translateX(100%)'
 
     }
 
@@ -115,18 +128,21 @@ window.addEventListener('scroll', function(){
     if(scroll > 4500){
         panelWindow.style.position = "fixed";
         panelWindow.style.top = "0%";
-        console.log("WINDOW FIXED!!!2");
+        layerWin.style.transform = 'translateY(0%)';
+        layerWin.style.visibility = 'visible';
 
     } else {
         panelWindow.style.position = "static";
+        layerWin.style.visibility = 'hidden';
+        layerWin.style.transform = 'translateY(-100%)';
     }
     // test ELEMENT ANIM
     if(scroll > 4630) {
         elementWindow.style.transform = 'translateX(0%)';
         textWindow.style.transform = 'translateX(0%)';
     } else {
-        textWindow.style.transform = 'translateX(100%)';
-        elementWindow.style.transform = 'translateX(100%)'
+        textWindow.style.transform = 'translateX(-150%)';
+        elementWindow.style.transform = 'translateX(580%)'
 
     }
         
@@ -178,7 +194,7 @@ window.addEventListener('scroll', function(){
 
 });
 
-//**** NEW FUN FOR ELEMENT ANIMATION ****//
+//**** NEW FUN FOR ELEMENT ANIMATION TV ****//
 function elementAnim1(){
     const scroll = window.pageYOffset
     const width = showcaseWidth.offsetWidth
@@ -189,13 +205,13 @@ function elementAnim1(){
         textTV.style.transition = 'all 2s ease-in'
         elementTV.style.transition = 'all 2.5s ease-in-out'
         elementTV.style.transform = 'translateX(-40%)';
-        console.log('Workss 900px');
+       
     } else {
-        textTV.style.transform = 'translateY(-200%)';
+        textTV.style.transform = 'translateY(-220%)';
         textTV.style.transition = 'all 1s ease-in';
         elementTV.style.transition = 'all 1s ease-in-out'
-        elementTV.style.transform = 'translateX(0%)';
-        console.log('WorksssBack 900px');
+        elementTV.style.transform = 'translateX(80%)';
+      
     }
 }
 
