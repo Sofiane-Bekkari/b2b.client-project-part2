@@ -517,6 +517,47 @@ img.tv {
     width: 500px;
     transition: all 2s ease-out;
 }
+/* social media pillow */
+.pillows {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: -150px;
+    transition: all 3.5s ease-in-out;
+    z-index: 99;
+}
+img.s-media.inst{
+    top: 20px;
+    position: absolute;
+    left: 30px;
+    height: 12vh;
+    width: 160px;
+    transform: rotate(1deg);
+}
+img.s-media.fb {
+    position: absolute;
+    top: -5px;
+    left: 180px;
+    transform: rotate(-3deg);
+}
+img.s-media.yt {
+    position: absolute;
+    top: 12px;
+    width: 155px;
+    left: 580px;
+    transform: rotate(2deg);
+}
+img.s-media.twi {
+    position: absolute;
+    top: 2px;
+    left: 345px;
+    width: 170px;
+    transform: rotate(2deg);
+}
+img.s-media {
+    width: 15%;
+    display: block;
+}
 
 /* window */
 .panel-window {
@@ -1334,9 +1375,9 @@ footer {
     }
     img.desk {
        position: absolute;
-       width: 950px;
-       top: 380px;
-       right: -30px;
+       width: 1150px;
+       top: 280px;
+       right: -120px;
        margin: 0;
        padding: 0;
     }
@@ -1517,6 +1558,11 @@ footer {
        margin-top: 20rem;
        align-items: flex-end;
        justify-content: flex-end;
+   }
+   img.desk {
+       width: 1250px;
+       top: 330px;
+       right: -90px;
    }
    .main-text {
        margin-bottom: 22rem;

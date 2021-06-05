@@ -29,6 +29,7 @@ const blueSection = document.querySelector(".section-blue");
 const panelTv = document.querySelector(".panel-tv");
 const panelSofa = document.querySelector(".panel-sofa");
 const panelWindow = document.querySelector(".panel-window");
+const pillowSofa = document.querySelector(".pillows");
 
 //LAYERS SLIDE
 const layerTv = document.querySelector('.layer-tv');
@@ -116,9 +117,13 @@ window.addEventListener('scroll', function(){
     if(scroll > 3630) {
         textSofa.style.transform = 'translateY(0%)';
         elementSofa.style.transform = 'translateX(-38%)'
+        pillowSofa.style.top = '550px'; 
+        pillowSofa.style.transition = '3.5s';
     } else {
         textSofa.style.transform = 'translateX(-130%)';
-        elementSofa.style.transform = 'translateX(100%)'
+        elementSofa.style.transform = 'translateX(100%)';
+        pillowSofa.style.top = '-150px';
+        pillowSofa.style.transition = '1s';
 
     }
 
