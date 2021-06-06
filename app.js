@@ -111,21 +111,21 @@ window.addEventListener('scroll', function(){
     } else {
         panelSofa.style.position = "static";
         layerSofa.style.transform = 'translateY(-100%)';
-        layerSofa.style.visibility = 'hidden';
+        //layerSofa.style.visibility = 'hidden';
     }
     // test ELEMENTS ANIMATION
-    if(scroll > 3630) {
-        textSofa.style.transform = 'translateY(0%)';
-        elementSofa.style.transform = 'translateX(-38%)'
-        pillowSofa.style.top = '550px'; 
-        pillowSofa.style.transition = '3.5s';
-    } else {
-        textSofa.style.transform = 'translateX(-130%)';
-        elementSofa.style.transform = 'translateX(100%)';
-        pillowSofa.style.top = '-150px';
-        pillowSofa.style.transition = '1s';
-
-    }
+    //if(scroll > 3630) {
+    //    textSofa.style.transform = 'translateY(0%)';
+    //    elementSofa.style.transform = 'translateX(-38%)//'
+    //    pillowSofa.style.top = '550px'; 
+    //    pillowSofa.style.transition = '3.5s';
+    //} else {
+    //    textSofa.style.transform = 'translateX(-130%)';
+    //    elementSofa.style.transform = 'translateX(100%)//';
+    //    pillowSofa.style.top = '-150px';
+    //    pillowSofa.style.transition = '1s';
+//
+    //}
 
 
 
@@ -156,20 +156,22 @@ window.addEventListener('scroll', function(){
     if (width > 900){
         checkScreen();
     }
-
+    
     // Cheching if time to lighting            
     if (width > 900){
         timeLighting();
         continueScroll();
         yellowCheck();
+        pillowDown();
         elementAnim1();
-
+        
     }
-
+    
     // Cheching light on 1200px 
     if (width > 1200){
         timeLightingTwo();
         continueScroll();
+        pillowDown2();
     }
 
     // Cheching light on 1400px 
@@ -184,6 +186,7 @@ window.addEventListener('scroll', function(){
         timeLightingSuperLarge();
         continueScrollX();
         yellowCheckX();
+        pillowDown3();
     }
     // 2880PX
     if (width > 2800){
@@ -219,8 +222,6 @@ function elementAnim1(){
       
     }
 }
-
-
 
 
 
@@ -356,6 +357,78 @@ function checkScreen3(){
         lamp.style.display = `block`; 
        
 }}
+
+//** PILLOWS FUNCTION 900px **//
+function pillowDown(){
+    let scroll = window.pageYOffset
+    let width = showcaseWidth.offsetWidth
+    console.log('Here ScrollingX Damn: ', scroll)
+
+    // testing these 
+    if(scroll > 3630) {
+        textSofa.style.transform = 'translateY(0%)';
+        elementSofa.style.transform = 'translateX(-38%)'
+        pillowSofa.style.top = '510px'; 
+        pillowSofa.style.transition = '3.5s';
+        console.log('PILLOW ON!!');
+    } else {
+        textSofa.style.transform = 'translateX(-130%)';
+        elementSofa.style.transform = 'translateX(100%)';
+        pillowSofa.style.top = '-150px';
+        pillowSofa.style.transition = '1s';
+        console.log('PILLOW OFF!!');
+
+    }
+
+}
+//** PILLOWS FUNCTION 1200px **//
+function pillowDown2(){
+    let scroll = window.pageYOffset
+    let width = showcaseWidth.offsetWidth
+    console.log('Here ScrollingX Damn: ', scroll)
+
+    // testing these 
+    if(scroll > 3640 && width > 1190) {
+        textSofa.style.transform = 'translateY(0%)';
+        elementSofa.style.transform = 'translateX(-38%)'
+        pillowSofa.style.top = '540px'; 
+        pillowSofa.style.transition = '3.5s';
+        console.log('PILLOW 1200 ON!!');
+    } else {
+        textSofa.style.transform = 'translateX(-130%)';
+        elementSofa.style.transform = 'translateX(100%)';
+        pillowSofa.style.top = '-150px';
+        pillowSofa.style.transition = '1s';
+        console.log('PILLOW 1200 OFF!!');
+
+    }
+
+}
+//** PILLOWS FUNCTION 1200px **//
+function pillowDown3(){
+    let scroll = window.pageYOffset
+    let width = showcaseWidth.offsetWidth
+    console.log('Here ScrollingX Damn: ', scroll)
+
+    // testing these 
+    if(scroll > 3650 && width < 2000) {
+        textSofa.style.transform = 'translateY(0%)';
+        elementSofa.style.transform = 'translateX(-38%)'
+        pillowSofa.style.top = '580px'; 
+        pillowSofa.style.transition = '3.5s';
+        console.log('PILLOW 2500 ON!!');
+    } else {
+        textSofa.style.transform = 'translateX(-130%)';
+        elementSofa.style.transform = 'translateX(100%)';
+        pillowSofa.style.top = '-150px';
+        pillowSofa.style.transition = '1s';
+        console.log('PILLOW 2500 OFF!!');
+
+    }
+
+}
+
+
 
 function timeLighting(){
     // ON the light in right time

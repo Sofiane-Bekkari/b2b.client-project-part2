@@ -960,6 +960,33 @@ footer {
         width: 1100PX;
         top: 450px;
     }
+    /* PILLOWS */
+    .pillows {
+        top: 10px;
+        margin-left: ;
+    }
+    img.s-media.inst {
+        left: 90px;
+        width: 125px;
+        height: auto;
+        top: 45px;
+    }
+    img.s-media.fb {
+        left: 230px;
+        width: 145px;
+        top: 13px;
+    }
+    img.s-media.twi {
+        left: 380px;
+        width: 145px;
+        top: 10px;
+    }
+    img.s-media.yt {
+       
+        left: 525px;
+        width: 130px;
+        top: 23px;
+    }
     img.window {
         position: absolute;
          top: -250px;
@@ -1118,6 +1145,13 @@ footer {
         top: 520px;
         width: 80%;
     }
+      /* PILLOWS */
+      .pillows {
+        left: 50px;
+    }
+    img.s-media.inst {
+        top: 45px;
+    }
 }
 
 /* media query at 1400px */
@@ -1223,6 +1257,20 @@ footer {
         top: 450px;
         width: 1400px;
     }
+    /*pillows*/
+   img.s-media.inst {
+       top: 50px;
+       width: 140px;
+   }
+   img.s-media.fb {
+    top: 35px;
+   }
+   img.s-media.twi {
+    top: 30px;
+   }
+   img.s-media.yt {
+    top: 35px;
+   }
 }
 
 /* media query at 1600px */
@@ -1320,6 +1368,28 @@ footer {
     .t-window {
         top: 600px;
         width: 80%;
+    }
+    img.s-media.inst {
+        left: -10px;
+        width: 155px;
+        top: 45px;
+        transform: rotate(-2deg);
+    }
+    img.s-media.fb {
+        left: 155px;
+        top: 16px;
+        width: 170px;
+    }
+    img.s-media.twi {
+        left: 325px;
+        top: 15px;
+        width: 170px;
+        transform: rotate(-2deg);
+    }
+    img.s-media.yt {
+        width: 145px;
+        top: 30px;
+        left: 535px;
     }
 
 }
@@ -1537,6 +1607,30 @@ footer {
     .t-window {
         font-size: 1.8rem;
     }
+    /*pillows*/
+    img.s-media.inst {
+        left: -10px;
+        width: 255px;
+        top: 255px;
+        transform: rotate(-2deg);
+    }
+    img.s-media.fb {
+        left: 235px;
+        top: 230px;
+        width: 270px;
+    }
+    img.s-media.twi {
+        left: 455px;
+        top: 15px;
+        width: 270px;
+        transform: rotate(-2deg);
+    }
+    img.s-media.yt {
+        width: 245px;
+        top: 230px;
+        left: 835px;
+    }
+
 }
 
 /** media at 2880x1880 **/
