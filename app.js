@@ -198,6 +198,7 @@ window.addEventListener('scroll', function(){
         timeLightingSuperLargeX(); // for hite light
         continueScrollX2(); // keep on scroll
         yellowCheckX2(); // keep move lamp
+        pillowDown4();
     }
 
 });
@@ -404,25 +405,48 @@ function pillowDown2(){
     }
 
 }
-//** PILLOWS FUNCTION 1200px **//
+//** PILLOWS FUNCTION 2500px **//
 function pillowDown3(){
     let scroll = window.pageYOffset
     let width = showcaseWidth.offsetWidth
-    console.log('Here ScrollingX Damn: ', scroll)
+  
 
     // testing these 
-    if(scroll > 3650 && width < 2000) {
+    if(scroll > 3650 && width < 2800) {
         textSofa.style.transform = 'translateY(0%)';
         elementSofa.style.transform = 'translateX(-38%)'
-        pillowSofa.style.top = '580px'; 
+        pillowSofa.style.top = '550px'; 
         pillowSofa.style.transition = '3.5s';
         console.log('PILLOW 2500 ON!!');
     } else {
         textSofa.style.transform = 'translateX(-130%)';
         elementSofa.style.transform = 'translateX(100%)';
-        pillowSofa.style.top = '-150px';
+        pillowSofa.style.top = '-450px';
         pillowSofa.style.transition = '1s';
         console.log('PILLOW 2500 OFF!!');
+
+    }
+
+}
+//** PILLOWS FUNCTION 2800px **//
+function pillowDown4(){
+    let scroll = window.pageYOffset
+    let width = showcaseWidth.offsetWidth
+  
+
+    // testing these 
+    if(scroll > 3650 && width > 2800) {
+        textSofa.style.transform = 'translateY(0%)';
+        elementSofa.style.transform = 'translateX(-38%)'
+        pillowSofa.style.top = '780px'; 
+        pillowSofa.style.transition = '3.5s';
+        console.log('PILLOW 2800 ON!!');
+    } else {
+        textSofa.style.transform = 'translateX(-130%)';
+        elementSofa.style.transform = 'translateX(100%)';
+        pillowSofa.style.top = '-450px';
+        pillowSofa.style.transition = '1s';
+        console.log('PILLOW 2800 OFF!!');
 
     }
 
