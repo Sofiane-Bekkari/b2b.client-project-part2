@@ -10,7 +10,6 @@ berger.addEventListener('click', function(){
 
 
 ///**** lamp light ****/// 
-
 let lamp = document.querySelector('.light-lamp');
 const showcaseWidth = document.querySelector('.showcase');
 const lampDark = document.querySelector('.lamp-dark-1');
@@ -20,15 +19,20 @@ const shadowLight = document.querySelector('img.lamp-shadow');
 
 //**** Main Text Hide ****//
 const mainText = document.getElementById('hide-right');
+const textYellow = document.querySelector('.text-yellow');
 
 //*** FIXED Section ***// 
 const yellowSection = document.querySelector(".yellow-section");
+const yellowElement = document.querySelector(".yellow");
 const blueSection = document.querySelector(".section-blue");
 
 // TV, Sofa, Window, Section
 const panelTv = document.querySelector(".panel-tv");
+const elementTv = document.querySelector(".ele-tv");
 const panelSofa = document.querySelector(".panel-sofa");
+const eleSofa = document.querySelector(".ele-sofa");
 const panelWindow = document.querySelector(".panel-window");
+const elementWin = document.querySelector(".ele-win");
 const pillowSofa = document.querySelector(".pillows");
 
 //LAYERS SLIDE
@@ -40,13 +44,13 @@ const layerWin = document.querySelector('.layer-win');
 const textTV = document.querySelector(".t-tv");
 const textSofa = document.querySelector(".t-sofa");
 const textWindow = document.querySelector(".t-window");
-console.log(textTV)
+
 
 // ELEMENTS ANIMATION
 const elementTV = document.querySelector(".tv");
 const elementSofa = document.querySelector(".sofa");
 const elementWindow = document.querySelector(".window");
-console.log(elementTV);
+
 
 // Event on Scroll
 window.addEventListener('scroll', function(){
@@ -54,13 +58,15 @@ window.addEventListener('scroll', function(){
     let width = showcaseWidth.offsetWidth
     let calcul = scroll - 300
 
-    console.log("Scrolling: ",scroll)
+    console.log("Scrolling: ",scroll);
+
+
     // hide text
     if (scroll > 100){
-        mainText.style.transform = "translate(-1500px)"
+        mainText.style.transform = "translate(-1500px)";
     }
     else if (scroll < 100){
-        mainText.style.transform = "translate(0px)"
+        mainText.style.transform = "translate(0px)";
     }
 
     // Scrolling the grey lamp
@@ -74,21 +80,43 @@ window.addEventListener('scroll', function(){
         yellowSection.style.top = "0%";
         yellowSection.style.width = "100%";
     } else {
-        yellowSection.style.position = "static"
+        yellowSection.style.position = "static";
     }
-    
+    //TEXT YELLOW
+    if (scroll > 2000){
+        textYellow.style.transform = 'translateX(0%)';
+        console.log(textYellow, 'TEXT YELLOW**');
+    } else {
+        textYellow.style.transform = 'translateX(-250%)';
+    }
+
+    // move  to left side
+    if (scroll > 2300 && width < 2000) {
+        yellowElement.style.transform = "translate(-150%)";
+    } else {
+        yellowElement.style.transform = "translate(0%)";
+    }
+    // move to the left on large
+    if (scroll > 2450) {
+        yellowElement.style.transform = "translate(-150%)"
+    } else {
+        yellowElement.style.transform = "translate(0%)"
+        console.log("move to left << 2500");
+    }
+
+
     // test tv FIXED  ****** 
     if(scroll > 2500){ 
         panelTv.style.position = "fixed";
         panelTv.style.top = "0%";
-        layerTv.style.transform = 'translateY(0%)';
+        layerTv.style.transform = 'translateX(0%)';
         layerTv.style.visibility = 'visible';
 
       
     } else {
         panelTv.style.position = "static"
         layerTv.style.visibility = 'hidden';
-        layerTv.style.transform = 'translateY(-100%)';
+        layerTv.style.transform = 'translateX(100%)';
     }
     // test ELEMENT ANIMATION
     if(scroll > 2550) {
@@ -97,8 +125,17 @@ window.addEventListener('scroll', function(){
        
     } else {
         textTV.style.transform = 'translateY(120%)';
-        elementTV.style.transform = 'translateX(100%)';
-      
+        elementTV.style.transform = 'translateX(100%)'; 
+    }
+    
+
+    // move tv element to the left
+
+    if (scroll > 3300) {
+        elementTv.style.transform = 'translateX(-140%)';
+    } else {
+        elementTv.style.transform = 'translateX(0%)';
+
     }
 
 
@@ -106,46 +143,50 @@ window.addEventListener('scroll', function(){
     if(scroll > 3500){
         panelSofa.style.position = "fixed";
         panelSofa.style.top = "0%";
+        textSofa.style.transition= '4s'
         layerSofa.style.visibility = 'visible';
-        layerSofa.style.transform = 'translateY(0%)';
+       
+        layerSofa.style.transform = 'translateX(0%)';
     } else {
         panelSofa.style.position = "static";
-        layerSofa.style.transform = 'translateY(-100%)';
+        layerSofa.style.transform = 'translateX(100%)';
         //layerSofa.style.visibility = 'hidden';
     }
-    // test ELEMENTS ANIMATION
-    //if(scroll > 3630) {
-    //    textSofa.style.transform = 'translateY(0%)';
-    //    elementSofa.style.transform = 'translateX(-38%)//'
-    //    pillowSofa.style.top = '550px'; 
-    //    pillowSofa.style.transition = '3.5s';
-    //} else {
-    //    textSofa.style.transform = 'translateX(-130%)';
-    //    elementSofa.style.transform = 'translateX(100%)//';
-    //    pillowSofa.style.top = '-150px';
-    //    pillowSofa.style.transition = '1s';
-//
-    //}
 
+    // move sofa element to left
+    if (scroll > 4200){
+        eleSofa.style.transform = "translateX(-150%)";
+    } else {
+        eleSofa.style.transform = "translateX(0%)";
+    }
+
+    // move window element to left
+    if (scroll > 5300){
+    elementWin.style.transform = 'translateX(-150%)';
+    } else {
+        elementWin.style.transform = 'translateX(0%)';
+    }
 
 
     // test Window FIXED ****** 
     if(scroll > 4500){
         panelWindow.style.position = "fixed";
         panelWindow.style.top = "0%";
-        layerWin.style.transform = 'translateY(0%)';
+        layerWin.style.transform = 'translateX(0%)';
         layerWin.style.visibility = 'visible';
 
     } else {
         panelWindow.style.position = "static";
         layerWin.style.visibility = 'hidden';
-        layerWin.style.transform = 'translateY(-100%)';
+        layerWin.style.transform = 'translateX(100%)';
     }
     // test ELEMENT ANIM
     if(scroll > 4630) {
         elementWindow.style.transform = 'translateX(0%)';
         textWindow.style.transform = 'translateX(0%)';
+        textWindow.style.opacity = '0.90';
     } else {
+        textWindow.style.opacity = '0';
         textWindow.style.transform = 'translateX(-150%)';
         elementWindow.style.transform = 'translateX(580%)'
 
@@ -265,10 +306,10 @@ function yellowCheckX(){
     const width = showcaseWidth.offsetWidth
     const scroll = window.pageYOffset
 
-    if(scroll > 2280 && width < 2800){
+    if(scroll > 2280 && width < 2800){ 
         yellowLamp.style.display = `block`;
         yellowLamp.style.top = `${scroll -2040}px`;
-        console.log('THAT HAPPEND 2500px!!')
+     
      }
 }
 /*** YELLOW LAMP 2880px ***/
@@ -279,7 +320,7 @@ function yellowCheckX2(){
     if(scroll > 3000){
         yellowLamp.style.display = `block`;
         yellowLamp.style.top = `${scroll -2150}px`;
-       console.log('THAT HAPPEND 2880px!!')
+      
      }
 }  
 /*** YELLOW LAMP ***/
@@ -368,21 +409,23 @@ function pillowDown(){
     // testing these 
     if(scroll > 3630) {
         textSofa.style.transform = 'translateY(0%)';
+        textSofa.style.opacity = '0.95';
         elementSofa.style.transform = 'translateX(-38%)'
         pillowSofa.style.top = '510px'; 
-        pillowSofa.style.transition = '3.5s';
-        console.log('PILLOW ON!!');
+        pillowSofa.style.transition = '2s';
+      
     } else {
-        textSofa.style.transform = 'translateX(-130%)';
+        textSofa.style.transform = 'translateX(-230%)';
+        textSofa.style.opacity = '0';
         elementSofa.style.transform = 'translateX(100%)';
         pillowSofa.style.top = '-150px';
         pillowSofa.style.transition = '1s';
-        console.log('PILLOW OFF!!');
+    
 
     }
 
 }
-//** PILLOWS FUNCTION 1200px **//
+//** PILLOWS FUNCTION 1200px **// 
 function pillowDown2(){
     let scroll = window.pageYOffset
     let width = showcaseWidth.offsetWidth
@@ -391,17 +434,17 @@ function pillowDown2(){
     // testing these 
     if(scroll > 3640 && width > 1190) {
         textSofa.style.transform = 'translateY(0%)';
-        elementSofa.style.transform = 'translateX(-38%)'
+        textSofa.style.visibility = 'visible';
+        elementSofa.style.transform = 'translateX(-38%)';
         pillowSofa.style.top = '540px'; 
-        pillowSofa.style.transition = '3.5s';
-        console.log('PILLOW 1200 ON!!');
+        textSofa.style.transition = '3s';
+        pillowSofa.style.transition = '2s';
+      
     } else {
-        textSofa.style.transform = 'translateX(-130%)';
+        textSofa.style.transform = 'translateX(-180%)';
         elementSofa.style.transform = 'translateX(100%)';
         pillowSofa.style.top = '-150px';
         pillowSofa.style.transition = '1s';
-        console.log('PILLOW 1200 OFF!!');
-
     }
 
 }
@@ -413,17 +456,19 @@ function pillowDown3(){
 
     // testing these 
     if(scroll > 3650 && width < 2800) {
-        textSofa.style.transform = 'translateY(0%)';
+        textSofa.style.transform = 'translateX(0%)';
         elementSofa.style.transform = 'translateX(-38%)'
+        elementSofa.style.transition = '1.8s';
+        textSofa.style.transition = '3.8s';
         pillowSofa.style.top = '550px'; 
-        pillowSofa.style.transition = '3.5s';
-        console.log('PILLOW 2500 ON!!');
+        pillowSofa.style.transition = '1.5s';
+      
     } else {
-        textSofa.style.transform = 'translateX(-130%)';
+        textSofa.style.transform = 'translateX(-150%)';
         elementSofa.style.transform = 'translateX(100%)';
         pillowSofa.style.top = '-450px';
         pillowSofa.style.transition = '1s';
-        console.log('PILLOW 2500 OFF!!');
+      
 
     }
 
@@ -436,17 +481,18 @@ function pillowDown4(){
 
     // testing these 
     if(scroll > 3650 && width > 2800) {
-        textSofa.style.transform = 'translateY(0%)';
+        textSofa.style.transform = 'translateX(0%)';
         elementSofa.style.transform = 'translateX(-38%)'
+        textSofa.style.transition = '4s';
         pillowSofa.style.top = '780px'; 
-        pillowSofa.style.transition = '3.5s';
-        console.log('PILLOW 2800 ON!!');
+        pillowSofa.style.transition = '1.9s';
+       
     } else {
         textSofa.style.transform = 'translateX(-130%)';
         elementSofa.style.transform = 'translateX(100%)';
         pillowSofa.style.top = '-450px';
         pillowSofa.style.transition = '1s';
-        console.log('PILLOW 2800 OFF!!');
+     
 
     }
 
@@ -486,7 +532,6 @@ function timeLightingTwo(){
         lightTime.style.display = `block`;
         lampDark.style.display = `block`;
         shadowLight.style.display = `block`;
-        console.log('LIGHT IS ON 1200px!');
         console.log('scroll is:', scroll)
     } else {
         lightTime.style.display = `none`;

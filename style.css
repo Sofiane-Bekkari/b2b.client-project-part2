@@ -396,6 +396,7 @@ img.spot {
     width: 90%;
     margin: 0 auto;
     display: flex;
+    transition: all 1s;
     padding-bottom: 5rem;
 }
 .text-yellow {
@@ -403,6 +404,7 @@ img.spot {
     top: 45%;
     left: 0;
     padding: 0 2rem;
+    transition: all 3s;
     text-align: center;
 }
 .text-yellow h1 {
@@ -444,9 +446,14 @@ img.spot {
     background: linear-gradient(
         rgba(144, 202, 249, 0.308), 
         rgba(144, 202, 249, 0.773) );
-    transform: translateY(-100%);
+    transform: translateX(-100%);
     transition: all .5s ease;
 
+}
+
+.ele-tv {
+    /*transform: translateX(-100%);*/
+    transition: all 1s;
 }
 .text {
     text-align: center;
@@ -513,9 +520,16 @@ img.tv {
     transform: translateY(-100%);
     transition: all .5s ease-in-out;
 }
+.ele-sofa {
+    /*transform: translateX(-140%);*/
+    transition: all 1s;
+}
 .sofa {
     width: 500px;
     transition: all 2s ease-out;
+}
+.text.t-sofa {
+    transform: translateX(1800%);
 }
 /* social media pillow */
 .pillows {
@@ -526,7 +540,7 @@ img.tv {
     transition: all 3.5s ease-in-out;
     z-index: 99;
 }
-img.s-media.inst{
+img.s-media.inst {
     top: 20px;
     position: absolute;
     left: 30px;
@@ -558,7 +572,6 @@ img.s-media {
     width: 15%;
     display: block;
 }
-
 /* window */
 .panel-window {
     background: url(/images/bgn-showcase-1.png) no-repeat center;
@@ -579,10 +592,16 @@ img.s-media {
     transform: translateY(-100%);
     transition: all .5s ease-in-out;
 }
+.ele-win {
+    transition: all 1s;
+}
 .window {
     width: 350px;
     padding-bottom: 3rem;
     transition: all 2s ease-in-out;
+}
+.t-window {
+    opacity: 0;
 }
 .panel-empty {
     width: 100%;
@@ -596,10 +615,10 @@ img.s-media {
         opacity: 0;
     }
     20%{
-        opacity: 0.1;
+        opacity: 0.4;
     }
     100% {
-        opacity: 0.4;
+        opacity: 0.6;
     }
 }
 @keyframes spot {
@@ -607,10 +626,10 @@ img.s-media {
         opacity: 0;
     }
     10% {
-        opacity: 0;
+        opacity: 0.2;
     }
     20% {
-        opacity: 0.1;
+        opacity: 0.3;
     }
     100% {
         opacity: 0.5;
@@ -952,6 +971,7 @@ footer {
     .t-sofa {
         position: absolute;
         text-align: left;
+        opacity: 0;
         top: 150px;
     }
     img.sofa {
@@ -1572,7 +1592,7 @@ footer {
     }
     .t-sofa {
         top: 200px;
-        width: 80%;
+        width: 90%;
         left: 0;
     }
     .t-sofa h1 {
@@ -1732,6 +1752,11 @@ footer {
     .yellow-section img.lamp-yellow {
         width: 165px;
         top: -1800px;
+    }
+    .text-yellow {
+        transform: translateX(-250%);
+        transition: all 3s;
+        top: 150px;
     }
     .text-yellow h1 {
         font-size: 5rem;
